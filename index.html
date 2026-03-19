@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
     <title>Eid Mubarak Surprise! 🌙</title>
     <style>
-        body { margin: 0; padding: 0; overflow-x: hidden; transition: background-color 2s ease; font-family: 'Arial', sans-serif; text-align: center; }
-        .footerbtn { display: block; line-height: 55px; position: fixed; left: 2.5%; bottom: 10px; height: 60px; border-radius: 30px; background: #25D366; color: #ffffff; font-size: 22px; text-align: center; text-decoration: none; width: 95%; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 999; font-weight: bold; cursor: pointer; border: none; }
+        body { margin: 0; padding: 0; overflow-x: hidden; transition: background-color 2s ease; font-family: sans-serif; text-align: center; }
+        .footerbtn { display: block; line-height: 55px; position: fixed; left: 2.5%; bottom: 10px; height: 60px; border-radius: 30px; background: #25D366; color: #ffffff; font-size: 20px; text-align: center; text-decoration: none; width: 95%; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 999; font-weight: bold; border: none; outline: none; }
         .container { background: rgba(255,255,255,0.95); margin: 10px; padding: 20px; border-radius: 20px; border: 3px solid #ffd700; }
-        h1 { color: #d32f2f; font-size: 45px; margin: 10px 0; }
-        .shayari-box { font-size: 19px; color: #1b5e20; background: #f1f8e9; padding: 15px; border-radius: 15px; margin: 15px 0; line-height: 1.5; }
+        h1 { color: #d32f2f; font-size: 40px; margin: 10px 0; }
         .ad-banner { display: block; margin: 10px auto; padding: 10px; width: 85%; background: #fff; color: #ff0000; border: 1px dashed #ff0044; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 14px; }
     </style>
 </head>
 <body>
 
 <center>
-    <a href="https://omg10.com/4/10749356" target="_blank" class="ad-banner">
-        👉 CLICK HERE TO SEE EID SPECIAL GIFT 🎁
-    </a>
+    <a href="https://omg10.com/4/10749356" target="_blank" class="ad-banner">👉 CLICK HERE TO SEE EID GIFT 🎁</a>
 
     <div class="container">
         <h2 style="color: #2e7d32;">🌙 Eid-ul-Fitr Mubarak 🌙</h2>
-        
         <script>
             var user = prompt("रुको! ✋ आपके लिए ईद का एक जादुई तोहफा आया है! 🎁✨\n\nजादू देखने के लिए अपना नाम लिखें 👇");
             if (user == null || user == "") user = "Dost";
@@ -31,42 +27,31 @@
 
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjeWnXxCJ2pC8FYFK5_RYoZ9XLgNfEohPobbgn3QBgSu0zzkeB-f3VPfm8i1XGRQqA7pyaxGnKvnzu3PuHhML2mBRU5sbh6-9H8FqBZTtrfGoxQ9HrY24u_7jQnDyhSJttkT0NlOmgnRds/s320/eidd.png" width="85%">
 
-        <div class="shayari-box">
-            "Sada haste raho jaise haste hain phool,<br>
-            Duniya ki saari gham tum jao bhool,<br>
-            Aapko mubarak ho Eid ki preet!"
-        </div>
+        <p style="font-size: 18px; color: #1b5e20; background: #f1f8e9; padding: 10px; border-radius: 10px;">
+            "Sada haste raho jaise haste hain phool,<br>Duniya ki saari gham tum jao bhool!"
+        </p>
 
-        <a href="https://www.effectivegatecpm.com/em2yha4k6?key=a98ee7e120ee6fda276897a4f63cbf75" target="_blank" class="ad-banner" style="color: blue; border-color: blue;">
-            👉 अपना जादुई गिफ्ट यहाँ से देखें 🎁
-        </a>
+        <a href="https://www.effectivegatecpm.com/em2yha4k6?key=a98ee7e120ee6fda276897a4f63cbf75" target="_blank" class="ad-banner" style="color: blue; border-color: blue;">👉 अपना जादुई गिफ्ट यहाँ से देखें 🎁</a>
     </div>
 
     <br><br><br><br><br>
 
-    <button class="footerbtn" onclick="shareAndAd()">
-        Bhejen aur Magic Dekhen 👉🎁
-    </button>
+    <button class="footerbtn" onclick="openWhatsApp()">Bhejen aur Magic Dekhen 👉🎁</button>
 </center>
 
 <script>
-    function shareAndAd() {
-        // 1. WhatsApp link taiyar karein
-        var text = "🌙 *" + user + "* ne aapke liye Eid ka ek bahut pyara tohfa bheja hai! 🎁✨\n\nIse abhi kholen, apna naam likhen aur magic dekhen! 😍👇\n\n";
+    function openWhatsApp() {
+        var text = "🌙 *" + user + "* ने आपके लिए ईद का एक बहुत प्यारा तोहफा भेजा है! 🎁✨\n\nदेखें इसमें आपके लिए क्या खास है? जल्दी क्लिक करें और अपना नाम लिखें! 😍👇\n\n";
         var url = window.location.href;
-        var whatsappUrl = "whatsapp://send?text=" + encodeURIComponent(text + url);
+        
+        // Step 1: Pehle WhatsApp khulega (Isse block nahi hoga)
+        window.location.href = "whatsapp://send?text=" + encodeURIComponent(text + url);
 
-        // 2. Pehle background mein Ad kholen (New Tab)
-        window.open("https://www.effectivegatecpm.com/em2yha4k6?key=a98ee7e120ee6fda276897a4f63cbf75", "_blank");
-
-        // 3. Phir turant WhatsApp kholen
-        window.location.href = whatsappUrl;
+        // Step 2: Background mein Adsterra tab khol dega (User jab wapas aayega tab dikhega)
+        setTimeout(function(){
+            window.open("https://www.effectivegatecpm.com/em2yha4k6?key=a98ee7e120ee6fda276897a4f63cbf75", "_blank");
+        }, 1000);
     }
-
-    setInterval(function() {
-        var colors = ["#f8f9fa", "#e8f5e9", "#fff3e0", "#f3e5f5"];
-        document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    }, 3000);
 </script>
 
 </body>
