@@ -3,72 +3,144 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
-    <title>Surprise Gift For You! 🎁</title>
+    <title>Surprise For You! 🎁</title>
     <style>
-        body { margin: 0; padding: 0; overflow-x: hidden; transition: background-color 2s ease; font-family: sans-serif; }
-        .footerbtn { display: block; line-height: 50px; position: fixed; left: 2.5%; bottom: 10px; height: 60px; border-radius: 15px; background: #34af23; color: #ffffff; font-size: 22px; text-align: center; text-decoration: none; width: 95%; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 999; animation: shake 1s infinite; }
-        @keyframes shake { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-        h1 { color: #fff; text-shadow: 0 0 20px red; font-size: 40px; margin: 20px 0; animation: glow 2s infinite; }
-        @keyframes glow { 0%, 100% { text-shadow: 0 0 10px red; } 50% { text-shadow: 0 0 30px gold; } }
-        .main-card { background: rgba(255,255,255,0.9); padding: 20px; margin: 15px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-        .ad-banner { width: 100%; min-height: 100px; margin: 15px 0; display: flex; justify-content: center; align-items: center; }
-        .catchy-line { background: yellow; color: red; font-weight: bold; padding: 10px; border-radius: 10px; font-size: 18px; margin-bottom: 10px; animation: flash 1s infinite; }
-        @keyframes flash { 0% { opacity: 1; } 50% { opacity: 0.5; } }
+        i { color: #ff2323; }
+        body { margin: 0; padding: 0; overflow-x: hidden; transition: background-color 2s ease; font-family: 'Arial', sans-serif; }
+        
+        /* Fixed WhatsApp Footer */
+        .footerbtn {
+            display: block;
+            line-height: 45px;
+            position: fixed;
+            left: 2.5%;
+            bottom: 10px;
+            height: 55px;
+            border-radius: 15px;
+            background: #25D366;
+            color: #ffffff;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            width: 95%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 999;
+            animation: shake 1s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        /* Animations */
+        .m1, .m2 { position: fixed; width: auto; height: 100%; top: 0; z-index: -1; }
+        .m1 { left: 1%; } .m2 { right: 1%; }
+
+        h1 {
+            width: 90%;
+            font-size: 35px;
+            color: #fff;
+            margin: 20px auto;
+            text-shadow: 0 0 20px red;
+            animation: glow 3s infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px red; }
+            50% { text-shadow: 0 0 30px gold; }
+        }
+
+        figure { animation: wobble 5s infinite ease-in-out; }
+        @keyframes wobble { 0%, 100% { transform: rotate(3deg); } 50% { transform: rotate(-3deg); } }
+
+        .cssload-preloader-box { display: flex; justify-content: center; margin-top: 20px; }
+        .cssload-preloader-box div {
+            width: 22px; height: 22px; background: red; margin: 2px; color: white;
+            text-align: center; line-height: 22px; font-weight: bold; animation: pulse 0.7s infinite alternate;
+        }
+        @keyframes pulse { from { transform: scale(1); } to { transform: scale(1.3); background: #3399ff; } }
+
+        .ad-box {
+            background: #fff; border: 2px dashed #ff0044; padding: 10px;
+            margin: 15px auto; width: 85%; border-radius: 10px;
+        }
     </style>
 </head>
 <body>
 
+<marquee class="m1" behavior="scroll" direction="up" scrolldelay="5">
+    <img src="https://bit.ly/3iQGtlP" height="100px"/><br><img src="https://bit.ly/3vIBrdG" height="100px"/>
+</marquee>
+<marquee class="m2" behavior="scroll" direction="down" scrolldelay="5">
+    <img src="https://bit.ly/3iQGtlP" height="100px"/><br><img src="https://bit.ly/3vIBrdG" height="100px"/>
+</marquee>
+
 <center>
-    <div class="ad-banner">
-        <a href="https://omg10.com/4/10749356" target="_blank">
-            <img src="https://bit.ly/35KpR7f" width="300px" style="border: 2px solid red; border-radius: 10px;">
+    <div class="cssload-preloader-box">
+        <div>E</div><div>I</div><div>D</div><div>M</div><div>U</div><div>B</div><div>A</div><div>R</div><div>A</div><div>K</div>
+    </div>
+
+    <div class="ad-box">
+        <a href="https://omg10.com/4/10749356" target="_blank" style="text-decoration:none; color:red; font-weight:bold;">
+            👉 CLICK HERE TO SEE YOUR SURPRISE 🎁
         </a>
     </div>
 
-    <div class="catchy-line">👇 Pehle Apna Naam Likhen, Phir Magic Dekhen! 👇</div>
+    <figure>
+        <h1 id="userNameDisplay"></h1>
+    </figure>
 
-    <script>
-        var user_name = prompt("Aapka Naam Kya Hai?\n\n(Naam likhte hi surprise khulega!)");
-        if (user_name == null || user_name == "") user_name = "My Friend";
-        document.write("<h1>" + user_name + "</h1>");
-    </script>
-
-    <div class="main-card">
-        <p style="font-size: 24px; color: #ff0044; font-weight: bold;">WISHING YOU</p>
+    <div style="background: rgba(255,255,255,0.8); padding: 15px; border-radius: 15px; width: 85%;">
+        <p style="font-size: 24px; color: #ff0044; font-weight: bold;">☪ Wishing You ☪</p>
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjeWnXxCJ2pC8FYFK5_RYoZ9XLgNfEohPobbgn3QBgSu0zzkeB-f3VPfm8i1XGRQqA7pyaxGnKvnzu3PuHhML2mBRU5sbh6-9H8FqBZTtrfGoxQ9HrY24u_7jQnDyhSJttkT0NlOmgnRds/s320/eidd.png" width="80%">
-        <h2 style="color: #388e3c;">Eid Mubarak!</h2>
         
-        <p>Saal Mein Ek Baar Aati Hai Eid</p>
-        <p>Khushiyan Hazaar Laati Hai Eid</p>
+        <div style="margin-top:10px;">
+            <p style="background:red; color:#fff; padding:5px;">Saal Mein Baar Aati Hai EID</p>
+            <p style="background:green; color:#fff; padding:5px;">Khushiyan Hazar Lati Hai EID</p>
+        </div>
+
+        <div class="ad-box" style="border-color: green;">
+            <a href="https://www.effectivegatecpm.com/em2yha4k6?key=a98ee7e120ee6fda276897a4f63cbf75" target="_blank">
+                <img src="https://bit.ly/35KpR7f" width="180px"><br>
+                <b>Click Here for Special Gift 🎁</b>
+            </a>
+        </div>
     </div>
 
-    <div class="ad-banner">
-        <a href="https://omg10.com/4/10749356" target="_blank">
-            <button style="background: red; color: white; padding: 15px; border: none; border-radius: 50px; font-weight: bold; font-size: 18px; cursor: pointer;">
-                🎁 CLICK TO OPEN YOUR EID GIFT 🎁
-            </button>
-        </a>
-    </div>
+    <p id="byName" style="font-size: 20px; font-weight: bold;"></p>
+    
+    <br><br><br><br><br>
 
-    <br><br><br><br>
-
-    <a class="footerbtn" href="https://omg10.com/4/10749356" target="_blank" onclick="window.open('https://api.whatsapp.com/send?text=Dekho ' + user_name + ' ne tumhare liye kya bheja hai! 😍 Jaldi click karo 👇\n' + window.location.href);">
+    <a class="footerbtn" href="https://omg10.com/4/10749356" target="_blank" onclick="shareWhatsApp()">
         <img width="25px" src="https://bit.ly/3xFa8md" style="vertical-align: middle;"/>  
-        <b>Doston ko Bhejen aur Magic Dekhen</b>
+        <b>Share on WhatsApp & See Magic</b>
     </a>
-
 </center>
 
 <script>
-    // Background Color Animation
-    var colors = ["#ff9999", "#99ff99", "#9999ff", "#ffff99", "#ff99ff"];
-    var i = 0;
-    function changeColor() {
-        document.body.style.backgroundColor = colors[i];
-        i = (i + 1) % colors.length;
-        setTimeout(changeColor, 3000);
+    var user_name = prompt("Pehle Apna Naam Likhen 👇\n(Magic dekhne ke liye)");
+    if (user_name == null || user_name == "") user_name = "Friend";
+    document.getElementById("userNameDisplay").innerHTML = user_name;
+    document.getElementById("byName").innerHTML = "By - " + user_name;
+
+    function shareWhatsApp() {
+        var catchLine = "👉 " + user_name + " ne tumhare liye kuch bheja hai! 🎁\nIse kholo aur apna naam likho, phir magic dekho! 👇\n";
+        var currentUrl = window.location.href;
+        // Pehle ad khulega phir whatsapp
+        setTimeout(function(){
+            window.location.href = "whatsapp://send?text=" + encodeURIComponent(catchLine + currentUrl);
+        }, 500);
     }
-    window.onload = changeColor;
+
+    function setrandomcolor() {
+        var r = Math.floor(Math.random() * 55) + 200;
+        var g = Math.floor(Math.random() * 55) + 200;
+        var b = Math.floor(Math.random() * 55) + 200;
+        document.body.style.backgroundColor = "rgb("+r+","+g+","+b+")";
+        setTimeout(setrandomcolor, 2500);
+    }
+    window.onload = setrandomcolor;
 </script>
 
 </body>
